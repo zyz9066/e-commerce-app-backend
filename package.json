@@ -1,0 +1,32 @@
+{
+  "name": "e-commerce-app-backend",
+  "version": "1.0.0",
+  "description": "eCommerce application backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyz9066/note-taking-app-back-end.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express.js",
+    "Node.js"
+  ],
+  "author": "Tianye Zhao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zyz9066/note-taking-app-back-end/issues"
+  },
+  "homepage": "https://github.com/zyz9066/note-taking-app-back-end#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^17.3.1",
+    "nodemon": "^3.1.14"
+  }
+}
