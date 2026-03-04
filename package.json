@@ -1,6 +1,7 @@
 {
   "name": "e-commerce-app-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "eCommerce application backend",
   "main": "server.js",
   "scripts": {
@@ -23,7 +24,8 @@
   },
   "homepage": "https://github.com/zyz9066/note-taking-app-back-end#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.2.3"
   },
   "devDependencies": {
     "dotenv": "^17.3.1",

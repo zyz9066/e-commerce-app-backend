@@ -1,11 +1,16 @@
-const dotenv = require('dotenv');
-dotenv.config();
+import { config } from 'dotenv';
+config();
 
-const express = require('express');
+import express from 'express';
 
-const products = require('./data/products');
+// Local Imports
+import products from './data/products.js';
+import connectDB from './config/db.js';
 
 const port = process.env.PORT || 5000;
+
+// Connect to MongoDB
+connectDB();
 
 const app = express();
 
