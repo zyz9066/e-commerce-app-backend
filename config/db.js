@@ -1,25 +1,13 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
-import { MongoClient, ServerApiVersion } from 'mongodb';
-
-const client = new MongoClient(process.env.MONGO_URI, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
+import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    await client.db("ecommerce").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
-    console.log(`${error}`);
-    await client.close();
+    console.error(`Error: ${error.message}`);
     process.exit(1);
   }
-}
+};
 
 export default connectDB;
